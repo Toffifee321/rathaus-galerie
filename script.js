@@ -58,3 +58,18 @@ document.getElementById("weiter").addEventListener("click", function () {
 });
 
 anzeigen();
+
+// ---- Hell/Dunkel ----
+const modusKnopf = document.getElementById("modus");
+
+function modusSetzen(dunkel) {
+  document.body.classList.toggle("dunkel", dunkel);
+  modusKnopf.textContent = dunkel ? "Hell" : "Dunkel";
+  localStorage.setItem("dunkel", dunkel);
+}
+
+modusKnopf.addEventListener("click", function () {
+  modusSetzen(!document.body.classList.contains("dunkel"));
+});
+
+if (localStorage.getItem("dunkel") === "true") modusSetzen(true);

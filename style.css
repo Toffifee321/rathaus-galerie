@@ -39,6 +39,16 @@ button {
   margin-top: 24px;
 }
 
+body.dunkel {
+  background-color: #1c1c1c;
+  color: #eee;
+  color-scheme: dark;
+}
+
+body.dunkel #bild {
+  border-color: #555;
+}
+
 @media (max-width: 480px) {
   h1 {
     font-size: 1.4rem;
